@@ -11,6 +11,9 @@ Amazon VPC Lattice is a fully managed application networking service that enable
 3. Deploy applications with simplified networking configuration
 4. Connect Kubernetes services to the VPC Lattice service network
 
+![Architecture Diagram](draw.png)
+
+
 ## Prerequisites
 
 - Amazon EKS cluster
