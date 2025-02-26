@@ -15,11 +15,6 @@ spec:
       service:
         enabled: boolean | default=true
       serviceAccount: string | default=default
-      vpclattice:
-        enabled: boolean | default=false
-      vpcLatticeName: string | default="kro-vpc-lattice-demo"
-      gatewayClassName: string | default=amazon-vpc-lattice
-      listenerProtocol: string | default="HTTP"
     status:
       deploymentConditions: ${deployment.status.conditions}
       availableReplicas: ${deployment.status.availableReplicas}
