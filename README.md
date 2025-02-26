@@ -87,6 +87,13 @@ helm install gateway-api-controller \
     --wait
 ```
 
+### Deploy gatewayClass and gateway resources 
+```
+kubectl apply -f resources/gatewayclass.yaml
+kubectl apply -f resources/gateway.yaml
+```
+
+
 ## Resource Graph Definitions
 
 ### 3. Deploy the Lattice Resource Graph Definition

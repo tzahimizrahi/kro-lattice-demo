@@ -11,23 +11,9 @@ spec:
       namespace: string | default=default
       port: integer | default=80
       vpcLatticeName: string | default="kro-vpc-lattice-demo"
-      gatewayClassName: string | default=amazon-vpc-lattice
       listenerProtocol: string | default="HTTP"
 
   resources:
-  - id: gateway
-    template:
-      apiVersion: gateway.networking.k8s.io/v1beta1
-      kind: Gateway
-      metadata:
-        name: ${schema.spec.vpcLatticeName}
-      spec:
-        gatewayClassName: ${schema.spec.gatewayClassName}
-        listeners:
-          - name: http
-            protocol: ${schema.spec.listenerProtocol}
-            port: ${schema.spec.port}
-
   - id: targetgrouppolicy
     template:
       apiVersion: application-networking.k8s.aws/v1alpha1
