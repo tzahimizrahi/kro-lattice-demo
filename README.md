@@ -104,7 +104,7 @@ Create a Lattice Resource Graph Definition that maps VPC Lattice components to K
 kubectl apply -f rg-lattice.yaml
 ```
 
-The `rg-lattice.yaml` defines how to translate a simple schema into VPC Lattice-related Kubernetes Gateway API resources, including Gateway, TargetGroupPolicy, and HTTPRoute.
+The `rg-lattice.yaml` defines how to translate a simple schema into VPC Lattice-related Kubernetes Gateway API resources, including TargetGroupPolicy, and HTTPRoute.
 
 ### 4. Deploy the WebApp Resource Graph Definition
 
@@ -140,7 +140,7 @@ kubectl apply -f instance.yaml
 
 This project implements a three-layer architecture:
 
-1. **Base Resources Layer**: Core Kubernetes resources (Gateway, TargetGroupPolicy, HTTPRoute, Deployment, Service)
+1. **Base Resources Layer**: Core Kubernetes resources (TargetGroupPolicy, HTTPRoute, Deployment, Service)
 2. **Resource Graph Layer**: Reusable templates (Lattice, WebApp, WebService) that abstract the base resources
 3. **Instance Layer**: Application-specific instances created from the resource graphs
 
